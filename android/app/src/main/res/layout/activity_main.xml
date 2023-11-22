@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    &lt;!&ndash; Toolbar (Action Bar) &ndash;&gt;-->
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:background="@color/colorPrimary"-->
+<!--        android:elevation="4dp"-->
+<!--        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
+<!--        android:popupTheme="@style/ThemeOverlay.AppCompat.Light">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/back"-->
+<!--                android:layout_width="0dp"-->
+
+<!--                android:layout_weight="0.5"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:src="@drawable/back_con" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/insecure_connect_scan"-->
+<!--                android:layout_width="200dp"-->
+<!--                android:layout_weight="0.5"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:src="@drawable/print_icon" />-->
+<!--            <ImageView-->
+<!--                android:id="@+id/disconnect"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="0.5"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:src="@android:drawable/ic_menu_close_clear_cancel" />-->
+
+<!--        </LinearLayout>-->
+
+<!--    </androidx.appcompat.widget.Toolbar>-->
+
+    <!-- Add your content below -->
+
+    <ScrollView
+        style="@android:style/Widget.DeviceDefault.Light.ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#ffffff">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <!-- Sample Print Section -->
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:focusableInTouchMode="false"
+                android:fontFamily="monospace"
+                android:text="Print your receipt"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#0492D3"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/image_id"
+                android:layout_width="match_parent"
+                android:layout_height="495dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_image"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="392dp"
+                    android:layout_height="61dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_with_rounded_corners"
+                    android:onClick="printBase64Pdf"
+                    android:text="@string/image"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spn_charsize"
+                android:layout_width="10dp"
+                android:layout_height="11dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+
+                android:entries="@array/char_size_array" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:focusableInTouchMode="false"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Connect with printer before pressing 'PRINT IMAGE' button"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#575F63"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
